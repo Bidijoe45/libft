@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apavel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/20 13:28:49 by apavel            #+#    #+#             */
-/*   Updated: 2020/01/20 16:44:02 by apavel           ###   ########.fr       */
+/*   Created: 2020/01/20 16:44:58 by apavel            #+#    #+#             */
+/*   Updated: 2020/01/20 16:52:57 by apavel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *list, void (*del)(void *))
+void	ft_lstiter(t_list *lst, void (*f) (void *))
 {
-	if (list && del)
+	if (lst)
 	{
-		del(list->content);
-		free(list);
+		while (lst)
+		{
+			f(lst->content);
+			lst = lst->next;
+		}
 	}
 }

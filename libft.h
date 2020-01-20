@@ -6,7 +6,7 @@
 /*   By: apavel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 11:36:19 by apavel            #+#    #+#             */
-/*   Updated: 2020/01/20 16:32:18 by apavel           ###   ########.fr       */
+/*   Updated: 2020/01/20 17:32:13 by apavel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,5 @@ void ft_lstadd_back(t_list **lst, t_list *new);
 void ft_lstdelone(t_list *list, void (*del)(void *));
 void ft_lstclear(t_list **lst, void (*del)(void *));
 void ft_lstiter(t_list *lst, void(*f)(void *));
-
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 #endif

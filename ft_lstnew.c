@@ -6,7 +6,7 @@
 /*   By: apavel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/18 13:42:27 by apavel            #+#    #+#             */
-/*   Updated: 2020/01/20 15:45:26 by apavel           ###   ########.fr       */
+/*   Updated: 2020/01/20 16:44:34 by apavel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	list->content = content;
 	list->next = NULL;
-
 	return (list);
 }
