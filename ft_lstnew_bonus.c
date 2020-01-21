@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apavel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/08 18:26:12 by apavel            #+#    #+#             */
-/*   Updated: 2020/01/21 12:37:04 by apavel           ###   ########.fr       */
+/*   Created: 2020/01/18 13:42:27 by apavel            #+#    #+#             */
+/*   Updated: 2020/01/20 16:44:34 by apavel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	size_t i;
+	t_list	*list;
 
-	if (dst == src)
-		return (dst);
-	if (!dst && !src)
+	if (!(list = malloc(sizeof(t_list))))
 		return (NULL);
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dst);
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }
