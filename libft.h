@@ -6,7 +6,7 @@
 /*   By: apavel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 11:36:19 by apavel            #+#    #+#             */
-/*   Updated: 2020/01/21 12:22:40 by apavel           ###   ########.fr       */
+/*   Updated: 2020/01/23 09:50:42 by apavel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct	s_list
 }				t_list;
 
 size_t			ft_strlen(const char *str);
-size_t			ft_strlcpy(char *dst, char *src, size_t dstsize);
+size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
