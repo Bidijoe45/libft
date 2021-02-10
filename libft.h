@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apavel <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: apavel <apavel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 11:36:19 by apavel            #+#    #+#             */
-/*   Updated: 2020/01/23 12:08:45 by apavel           ###   ########.fr       */
+/*   Updated: 2020/11/04 13:17:45 by apavel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdlib.h>
@@ -66,5 +66,6 @@ void			ft_lstdelone(t_list *list, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void(*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
-void (*del)(void *));
+void			(*del)(void *));
+int				ft_isspace(char c);
 #endif
